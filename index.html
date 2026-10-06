@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafePark - Inicio de Sesión</title>
+
+  <link rel="stylesheet" href="styles/login.css" />
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logo-box">
+        <img src="img/SafeParkLogo.png" width="80" height="80">
+      </div>
+
+      <h1 class="title">SafePark</h1>
+      <p class="subtitle">Sistema de Control de Estacionamiento</p>
+    </div>
+
+    <!-- CARD LOGIN -->
+    <div class="card">
+
+      <div class="card-header">
+        <h2 class="card-title">Iniciar Sesión</h2>
+        <p class="card-desc">Ingrese su matrícula (estudiante) o correo institucional (administrador)</p>
+      </div>
+
+      <form id="loginForm" class="form">
+
+        <!-- IDENTIFICADOR -->
+        <div class="form-group">
+          <label>Matrícula o Correo Institucional</label>
+          <input type="text" id="identifier" placeholder="20231234 o adminuniversidad@utvm.edu.mx" required>
+          <p id="detectedText" class="detected"></p>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="form-group password-group">
+          <label>Contraseña</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+          <span id="togglePassword" class="toggle-pass">👁️</span>
+        </div>
+
+        <button type="submit" class="btn primary">Iniciar Sesión</button>
+
+        <p class="register-text">
+          ¿No tienes cuenta?
+          <a href="../views/register.html" class="link">Regístrate aquí</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- FEATURES
+    <div class="features">
+      <h3>Características</h3>
+      <ul>
+        <li><span class="dot"></span> Registro automático con tecnología RFID</li>
+        <li><span class="dot"></span> Notificaciones en tiempo real</li>
+        <li><span class="dot"></span> Historial completo de registros</li>
+      </ul>
+    </div> -->
+
+  </div>
+
+  <script src="javascript/login.js"></script>
+</body>
+
+</html>
