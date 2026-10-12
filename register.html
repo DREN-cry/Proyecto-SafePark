@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro</title>
+  <link rel="stylesheet" href="../styles/register.css" />
+</head>
+<body>
+
+  <div class="page-container">
+    <a href="../index.html" class="back-button">Volver al inicio</a>
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <img  src="../img/SafeParkLogo.png" width="80" height="80">
+        </div>
+        <h2>Crear Cuenta</h2>
+        <p>Registra tu información en el sistema</p>
+      </div>
+
+      <div class="card-body">
+
+        <div class="user-type-container">
+          <button id="btnUser" class="type-btn active">Estudiante</button>
+          <button id="btnAdmin" class="type-btn">Administrador</button>
+        </div>
+
+        <form id="registerForm">
+
+          <!-- DATOS PERSONALES -->
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input id="firstName" name="firstName" type="text" placeholder="Nombre" required />
+            </div>
+
+            <div class="form-group">
+              <label>Apellido paterno</label>
+              <input id="lastNameP" name="lastNameP" type="text" placeholder="Apellido Paterno" required />
+            </div>
+
+            <div class="form-group">
+              <label>Apellido materno</label>
+              <input id="lastNameM" name="lastNameM" type="text" placeholder="Apellido Materno" required />
+            </div>
+          </div>
+
+          <!-- CAMPOS ESTUDIANTE -->
+          <div id="studentFields">
+            <div class="form-group">
+              <label>Matrícula de Alumno</label>
+              <input id="studentId" name="studentId" type="text" placeholder="ej: 20213460"/>
+            </div>
+
+            <div class="form-group">
+              <label>Programa Educativo</label>
+              <select id="educationalProgram" name="educationalProgram" required>
+                <option value="">Selecciona tu programa</option>
+                <option value="ingenieria-ti">Ingeniería en TI</option>
+                <option value="turismo">Turismo</option>
+                <option value="gastronomia">Gastronomía</option>
+                <option value="administracion">Administración</option>
+                <option value="personal-educativo">Personal Educativo</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- CAMPOS ADMIN -->
+          <div id="adminFields" class="hidden">
+            <div class="form-group">
+              <label>ID de Empleado</label>
+              <input id="employeeId" name="employeeId" type="text" placeholder="0012" />
+            </div>
+            <div class="form-group">
+              <label>Tipo de Personal</label>
+              <select id="role" name="role" >
+                <option value="">Selecciona tu rol</option>
+                <option value="administrador">Administrador</option>
+                <option value="docente">Docente</option>
+                <option value="seguridad">Seguridad</option>
+                <option value="coordinador">Coordinador</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- CAMPOS COMUNES -->
+          <div class="form-group">
+            <label>Correo Electrónico</label>
+            <input id="email" name="email" type="email" placeholder="ej: correo@.utvm.edu" required />
+          </div>
+
+          <div class="form-group">
+            <label>Teléfono</label>
+            <input id="phone" name="phone" type="tel" placeholder="ej: 7721284840" required />
+          </div>
+
+          <!-- MOTO -->
+          <div id="motorcycleSection">
+            <h3>Datos de Motocicleta</h3>
+
+            <div class="form-group">
+              <label>Matrícula motocicleta (Opcional)</label>
+              <input id="motorcyclePlate" name="motorcyclePlate" type="text" placeholder="ej: ABC-010" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Marca</label>
+                <input id="motorcycleBrand" name="motorcycleBrand" type="text" placeholder="ej: Honda" />
+              </div>
+
+              <div class="form-group">
+                <label>Modelo</label>
+                <input id="motorcycleModel" name="motorcycleModel" type="text" placeholder="ej: z200" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Color Principal</label>
+              <input id="motorcycleColor" name="motorcycleColor" type="text" placeholder="ex: rojo" />
+            </div>
+
+            <div class="form-group">
+              <label>Cilindraje</label>
+              <input id="motorcycleDisplacement" name="motorcycleDisplacement" type="text" placeholder="ej: 150cc" />
+            </div>
+
+            <div class="form-group">
+              <label>Accesorios</label>
+              <textarea id="motorcycleAccessories" name="motorcycleAccessories" placeholder="ej: casco"> </textarea>
+            </div>
+
+          </div>
+
+          <div class="form-group password-group">
+           <label>Contraseña</label>
+           <input type="password" id="password" placeholder="••••••••" required>
+           <span id="togglePassword" class="toggle-pass">👁️</span>
+        </div>
+
+          <button type="submit" class="submit-btn">Crear Cuenta</button>
+
+          <p class="login-text">
+            ¿Ya tienes cuenta? <a href="../index.html" class="link">Inicia sesión</a>
+          </p>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../javascript/register.js"></script>
+</body>
+</html>
+
